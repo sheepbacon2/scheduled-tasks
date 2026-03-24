@@ -10,8 +10,8 @@ import pandas
 import datetime as dt
 import random
 import smtplib
-my_email = os.environ.get("my_email")
-password = os.environ.get("password")
+my_email = os.environ.get("MY_EMAIL")
+password = os.environ.get("PASSWORD")
 recipient = ""
 def random_letter():
     letters = ["letter_templates/letter_1.txt", "letter_templates/letter_2.txt", "letter_templates/letter_3.txt"]
