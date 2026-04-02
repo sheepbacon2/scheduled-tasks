@@ -3,6 +3,7 @@ from twilio.rest import Client
 from datetime import datetime
 import requests
 
+whatsapp = os.environ.get("WHATSAPP")
 my_lat = os.environ.get("MY_LAT")
 my_lon = os.environ.get("MY_LON")
 account_sid = os.environ.get("ACCOUNT_SID")
@@ -46,6 +47,6 @@ if will_rain:
         from_="whatsapp:+14155238886",
         body=f"It's going to rain on {rain_time_date} "
              f"at {rain_time2}",
-        to=f"whatsapp:{WHATSAPP}"
+        to=f"whatsapp:{whatsapp}"
     )
     print(message.status)
