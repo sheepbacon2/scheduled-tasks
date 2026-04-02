@@ -46,4 +46,5 @@ jobs:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+          WHATSAPP: ${{ secrets.WHATSAPP }}
         run: python main.py
