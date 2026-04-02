@@ -3,11 +3,11 @@ from datetime import datetime
 import requests
 
 
-account_sid = ACCOUNT_SID
-auth_token = AUTH_TOKEN
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("AUTH_TOKEN")
 client = Client(account_sid, auth_token)
 url = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = OWM_API_KEY
+api_key = os.environ.get("OWM_API_KEY")
 params = {
     "appid": api_key,
     "lat": MY_LAT,
