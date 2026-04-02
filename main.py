@@ -45,6 +45,6 @@ if will_rain:
         from_="whatsapp:+14155238886",
         body=f"It's going to rain on {rain_time_date} "
              f"at {rain_time2}",
-        to=f"whatsapp:{os.environ.get("WHATSAPP"}"
+        to=f"whatsapp:{os.environ.get("WHATSAPP")}"
     )
     print(message.status)
