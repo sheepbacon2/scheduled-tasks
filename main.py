@@ -3,7 +3,8 @@ from twilio.rest import Client
 from datetime import datetime
 import requests
 
-
+my_lat = MY_LAT
+my_lon = MY_LON
 account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
 client = Client(account_sid, auth_token)
@@ -11,8 +12,8 @@ url = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = os.environ.get("OWM_API_KEY")
 params = {
     "appid": api_key,
-    "lat": MY_LAT,
-    "lon": MY_LON,
+    "lat": my_lat,
+    "lon": my_lon,
     "units": "imperial",
     "cnt": 4,
 }
