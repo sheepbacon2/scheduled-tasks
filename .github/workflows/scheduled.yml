@@ -43,4 +43,6 @@ jobs:
           # Add more secrets in Settings > Secrets > Actions
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          MY_LAT: ${{ secrets.MY_LAT }}
+          MY_LON: ${{ secrets.MY_LON }}
         run: python main.py
