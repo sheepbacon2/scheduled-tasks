@@ -1,18 +1,17 @@
-import os
 from twilio.rest import Client
 from datetime import datetime
 import requests
 
 
-account_sid = os.environ.get("ACCOUNT_SID")
-auth_token = os.environ.get("AUTH_TOKEN")
+account_sid = ACCOUNT_SID
+auth_token = AUTH_TOKEN
 client = Client(account_sid, auth_token)
 url = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = os.environ.get("OWM_API_KEY")
+api_key = OWM_API_KEY
 params = {
     "appid": api_key,
-    "lat": 37.283127,
-    "lon": -121.991430,
+    "lat": MY_LAT,
+    "lon": MY_LON,
     "units": "imperial",
     "cnt": 4,
 }
@@ -45,6 +44,6 @@ if will_rain:
         from_="whatsapp:+14155238886",
         body=f"It's going to rain on {rain_time_date} "
              f"at {rain_time2}",
-        to=f"whatsapp:{os.environ.get("WHATSAPP")}"
+        to=f"whatsapp:{WHATSAPP}"
     )
     print(message.status)
